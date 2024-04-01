@@ -4,13 +4,8 @@ import { formatDate } from "../../../utils/helper";
 import { useWeather } from "../../../context/WeatherContext";
 
 export const Forecast = () => {
-  const {
-    isLoadingForecast,
-    isErrorForecast,
-    errorForecast,
-    forecastData,
-    filterDays,
-  } = useWeather();
+  const { isLoadingForecast, isErrorForecast, forecastData, filterDays } =
+    useWeather();
 
   const filteredForecastDays = filterDays(forecastData?.forecastDays);
 
@@ -18,7 +13,7 @@ export const Forecast = () => {
     <Card
       isLoading={isLoadingForecast}
       isError={isErrorForecast}
-      errorMessage={errorForecast?.message}
+      errorMessage={"error"}
     >
       <Card.Header>
         <h2>forecast</h2>

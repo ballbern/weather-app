@@ -39,8 +39,6 @@ export type WeatherContextProps = {
   isLoadingWeather: boolean;
   isErrorWeather: boolean;
   isErrorForecast: boolean;
-  errorWeather: Error | unknown | { message: string };
-  errorForecast: Error | unknown | { message: string };
   weatherSummaryData: WeatherSummaryDataType;
   sunRiseSetData: SunRiseSetDataType;
   forecastData: { forecastDays: ForecastDaysType[] };

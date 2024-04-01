@@ -18,5 +18,5 @@ export const useWeatherQuery = (
   city?: string,
   config?: { enabled: boolean }
 ) => {
-  return useQuery<Error>(weather, () => fetchForecast(weather, city), config);
+  return useQuery(weather, () => fetchForecast(weather, city), config);
 };

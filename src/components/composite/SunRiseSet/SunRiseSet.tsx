@@ -4,16 +4,13 @@ import { StyledSunRiseSet, StyledSunRiseSetBody } from "./styles";
 import { useWeather } from "../../../context/WeatherContext";
 
 export const SunRiseSet = () => {
-  const { isLoadingWeather, isErrorWeather, errorWeather, sunRiseSetData } =
-    useWeather();
-
-  console.log(errorWeather);
+  const { isLoadingWeather, isErrorWeather, sunRiseSetData } = useWeather();
 
   return (
     <Card
       isLoading={isLoadingWeather}
       isError={isErrorWeather}
-      errorMessage={errorWeather?.message}
+      errorMessage={"error"}
     >
       <Card.Header>
         <h2>sunrise and sunset</h2>

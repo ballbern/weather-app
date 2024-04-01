@@ -21,14 +21,12 @@ export const WeatherProvider = ({ children }: WeatherProviderProps) => {
     data: weatherData,
     isLoading: isLoadingWeather,
     isError: isErrorWeather,
-    error: errorWeather,
   } = useWeatherQuery("weather");
 
   const {
     data: forecastData,
     isLoading: isLoadingForecast,
     isError: isErrorForecast,
-    error: errorForecast,
   } = useWeatherQuery("forecast");
 
   //? moved filterDays from utils to custom hook.
@@ -51,8 +49,6 @@ export const WeatherProvider = ({ children }: WeatherProviderProps) => {
         isLoadingForecast,
         isErrorWeather,
         isErrorForecast,
-        errorWeather,
-        errorForecast,
         weatherSummaryData: {
           name: weatherData?.name,
           temp: weatherData?.main.temp,

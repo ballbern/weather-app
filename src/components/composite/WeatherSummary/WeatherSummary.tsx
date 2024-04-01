@@ -7,14 +7,13 @@ import {
 import { useWeather } from "../../../context/WeatherContext";
 
 export const WeatherSummary = () => {
-  const { isLoadingWeather, isErrorWeather, errorWeather, weatherSummaryData } =
-    useWeather();
+  const { isLoadingWeather, isErrorWeather, weatherSummaryData } = useWeather();
 
   return (
     <Card
       isLoading={isLoadingWeather}
       isError={isErrorWeather}
-      errorMessage={errorWeather?.message}
+      errorMessage={"error"}
     >
       <Card.Header>
         <CurrentTime />
